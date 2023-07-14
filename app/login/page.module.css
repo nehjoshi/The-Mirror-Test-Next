@@ -1,0 +1,7 @@
+.container {
+    height: calc(100vh - 60px);
+    background: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
