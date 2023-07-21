@@ -80,8 +80,12 @@
     transform: scale(1.05);
 }
 .forgot {
-    text-align: right !important;
     font-size: 0.8rem;
     color: #333333;
     cursor: pointer;
+}
+.error {
+    color: rgb(193, 0, 0);
+    cursor: default;
+    font-size: 1rem;
 }
