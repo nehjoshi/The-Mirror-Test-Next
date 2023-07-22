@@ -111,7 +111,6 @@ const schema = new Schema({
     },
     name: {
         type: String,
-        required: 'Name is required'
     },
     password: {
         type: String,
@@ -137,7 +136,7 @@ const schema = new Schema({
         required: false,
         expires: 60
     }
-}, {timestamps: true, collection: 'The Mirror Test'});
+}, {timestamps: true, collection: 'Users'});
 
 const User = models.User || model('User', schema);
 export default User;
