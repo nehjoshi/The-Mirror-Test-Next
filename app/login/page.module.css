@@ -32,7 +32,7 @@
 .form {
     color: #333333;
     width: 320px;
-    height: 400px;
+    height: fit-content;
     padding: 20px 20px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -78,6 +78,39 @@
 .btn:hover {
     background-color: #ddb033;
     transform: scale(1.05);
+}
+.googleBtn {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.2s ease;
+    align-items: center;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: gray;
+    outline: none;
+    border: 2px solid rgb(80, 80, 237);
+}
+.logoContainer {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(80, 80, 237);
 }
 .forgot {
     font-size: 0.8rem;

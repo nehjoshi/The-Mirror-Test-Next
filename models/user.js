@@ -115,7 +115,6 @@ const schema = new Schema({
     },
     password: {
         type: String,
-        required: true,
     },
     userAgreesWithPrivacyPolicy: {
         type: Boolean,

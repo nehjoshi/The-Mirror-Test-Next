@@ -1,5 +1,6 @@
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import Provider from "@/components/Provider";
 import { Nunito } from 'next/font/google';
 
 const nunito = Nunito({ subsets: ['latin'] })
@@ -14,10 +15,12 @@ const RootLayout = ({ children }) => {
     return (
         <html lang="en">
             <body className={nunito.className}>
-                <main>
-                    {children}
-                </main>
-                <Footer />
+                <Provider>
+                    <main>
+                        {children}
+                    </main>
+                    <Footer />
+                </Provider>
             </body>
         </html>
     )
