@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { ENDPOINTS } from '@/utils/endpoints';
 import Loader from '@/components/Loader/Loader';
 import { useRouter } from 'next/navigation';
-import { getProviders, signIn } from 'next-auth/react';
+import { getProviders, signIn, useSession } from 'next-auth/react';
 
 const Login = () => {
 
@@ -15,6 +15,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [providers, setProviders] = useState(null);
   const router = useRouter();
+  const { data: session } = useSession();
 
   useEffect(() => {
     const setProvidersFunction = async () => {
@@ -22,6 +23,7 @@ const Login = () => {
       setProviders(response);
     }
     setProvidersFunction();
+    if (sessionStorage.getItem('token')) router.push('/');
   }, [])
 
   const handleLogin = async () => {
@@ -32,7 +34,10 @@ const Login = () => {
       body: JSON.stringify({ email, password })
     })
     const response = await res.json();
-    if (response.token) router.push('/');
+    if (response.token) {
+      sessionStorage.setItem('token', response.token);
+      router.push('/');
+    }
     else {
       setError(response.error);
     }
@@ -71,11 +76,17 @@ const Login = () => {
             {!loading && <button className={styles.btn} onClick={handleLogin}>Login</button>}
             {error && <span className={styles.error}>{error}</span>}
             <span className={styles.forgot}>Forgot Password?</span>
+            <span className={styles.or}>OR</span>
             <div className={styles.googleBtn}>
               {providers && Object.values(providers).map(provider => (
                 <>
                   <div className={styles.logoContainer}>
-                    <Image src="/googleLogo.png" width={25} height={25} />
+                    <Image
+                      src="/googleLogo.png"
+                      width={25}
+                      height={25}
+                      alt="Google logo"
+                    />
                   </div>
                   <div
                     className={styles.text}
@@ -86,6 +97,7 @@ const Login = () => {
               ))}
 
             </div>
+            <span onClick={() => router.push('/register')} className={styles.register}>Don't have an account? Register.</span>
           </div>
         </div>
       </div>

@@ -42,6 +42,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding-bottom: 10px;
 }
 .title {
     text-align: center;
@@ -79,6 +80,16 @@
     background-color: #ddb033;
     transform: scale(1.05);
 }
+.forgot {
+    font-size: 0.8rem;
+    color: #333333;
+    cursor: pointer;
+}
+.or {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2694cf;
+}
 .googleBtn {
     width: 80%;
     height: 50px;
@@ -112,13 +123,14 @@
     color: #fff;
     background-color: rgb(80, 80, 237);
 }
-.forgot {
-    font-size: 0.8rem;
-    color: #333333;
-    cursor: pointer;
-}
+
 .error {
     color: rgb(193, 0, 0);
     cursor: default;
     font-size: 1rem;
+}
+.register {
+    color: #333333;
+    font-size: 1rem;
+    cursor: pointer;
 }
