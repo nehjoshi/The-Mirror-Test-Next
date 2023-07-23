@@ -75,6 +75,12 @@
     width: 100%;
 }
 
+.formItem:nth-child(5) {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
 .icon {
     position: absolute;
     top: 25px;
@@ -93,5 +99,41 @@
     background-color: transparent;
     border-bottom: 1px solid gray;
     color: #333333;
+}
 
+.checkbox {
+    transform: scale(1.5);
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4E4637;
+    color: #fff;
+    height: 40px;
+    border-radius: 2px;
+    width: 40%;
+    margin: 20px auto;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #006B61;
+    width: 45%;
+}
+.button:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    transition: none;
+    outline: none;
+    border: none;
+}
+.button:disabled:hover {
+    width: 40%;
+    background-color: #4E4637;
 }
