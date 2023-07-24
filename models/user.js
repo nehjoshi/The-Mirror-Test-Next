@@ -119,17 +119,39 @@ const schema = new Schema({
         type: Boolean,
         default: false
     },
-    quiz1: Quiz1Schema,
-    quiz2: Quiz2Schema, 
-    quiz3: Quiz3Schema,
-    quiz4: Quiz4Schema,
-    quiz5: Quiz5Schema,
-    reg1: reg1Schema,
-    reg2: reg2Schema,
+    quiz1: {
+        type: Quiz1Schema,
+        default: {}
+    },
+    quiz2: {
+        type: Quiz2Schema,
+        default: {}
+    },
+    quiz3: {
+        type: Quiz3Schema,
+        default: {}
+    },
+    quiz4: {
+        type: Quiz4Schema,
+        default: {}
+    },
+    quiz5: {
+        type: Quiz5Schema,
+        default: {}
+    },
+    reg1: {
+        type: reg1Schema,
+        default: {}
+    },
+    reg2: {
+        type: reg2Schema,
+        default: {}
+    },
     choseToSkipDetails: Boolean,
     completed: {
         type: Boolean,
         required: false,
+        default: false
     },
     resetToken: {
         type: String,

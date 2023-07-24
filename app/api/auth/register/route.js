@@ -10,9 +10,8 @@ export const POST = async (req, res) => {
         if (exists) return new Response(JSON.stringify({error: "Email already exists. Please use another email address."}), { status: 409 });
         const salt = await genSalt(10);
         const hashedPassword = await hash(password, salt);
-        const user = new User({ email, name, password: hashedPassword });
+        const user = new User({ email, name, password: hashedPassword, userAgreesWithPrivacyPolicy: true });
         await user.save();
-        console.log(user);
         const token = sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
         return new Response(JSON.stringify({ token }), { status: 200 });
     } catch (error) {

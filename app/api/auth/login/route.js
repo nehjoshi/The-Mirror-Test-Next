@@ -7,7 +7,8 @@ export const POST = async (req, res) => {
     try {
         await ConnectToDb();
         const exists = await User.findOne({ email });
-        console.log(exists);
+        const allUsers = await User.find();
+        console.log(allUsers);
         if (!exists) return new Response(JSON.stringify({error: "User does not exist"}), { status: 404 });
         const correct = await compare(password, exists.password);
         if (!correct) return new Response(JSON.stringify({error: "Incorrect password"}), { status: 401 });
