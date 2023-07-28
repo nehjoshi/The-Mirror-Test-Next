@@ -22,6 +22,7 @@ const Login = () => {
       const response = await getProviders();
       setProviders(response);
     }
+    console.log(session)
     setProvidersFunction();
     if (sessionStorage.getItem('token')) router.push('/');
   }, [])

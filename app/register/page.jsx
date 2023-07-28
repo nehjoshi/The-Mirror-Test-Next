@@ -3,8 +3,9 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { MdEmail } from 'react-icons/md';
 import { FaUser, FaKey, FaLock } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ENDPOINTS } from '@/utils/endpoints';
+import Loader from '@/components/Loader/Loader';
 
 const Register = () => {
 
@@ -15,15 +16,28 @@ const Register = () => {
     const [confirm, setConfirm] = useState("");
     const [checked, setChecked] = useState(false);
     const [error, setError] = useState("");
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect(() => {
+        if (email === "" || name === "" || password === "" || confirm === "" || !checked) setDisabled(true)
+        else setDisabled(false);
+    }, [email, name, password, confirm, checked])
+
 
     const Submit = async () => {
+        setLoading(true);
+        setError('');
         const res = await fetch(ENDPOINTS.REGISTER, {
             method: "POST",
-            body: JSON.stringify({email, name, password})
+            body: JSON.stringify({ email, name, password })
         });
         const response = await res.json();
         console.log(response);
         if (response.token) sessionStorage.setItem("token", response.token);
+        else {
+            setError(response.error);
+        }
+        setLoading(false);
     }
 
 
@@ -48,6 +62,7 @@ const Register = () => {
                                 placeholder="Email"
                                 className={styles.input}
                                 onChange={e => setEmail(e.target.value)}
+                                disabled={loading}
                             />
                         </div>
                         <div className={styles.formItem}>
@@ -57,6 +72,7 @@ const Register = () => {
                                 placeholder="Name"
                                 className={styles.input}
                                 onChange={e => setName(e.target.value)}
+                                disabled={loading}
                             />
                         </div>
                         <div className={styles.formItem}>
@@ -66,6 +82,7 @@ const Register = () => {
                                 placeholder="Password"
                                 className={styles.input}
                                 onChange={e => setPassword(e.target.value)}
+                                disabled={loading}
                             />
                         </div>
                         <div className={styles.formItem}>
@@ -75,20 +92,27 @@ const Register = () => {
                                 placeholder="Confirm Password"
                                 className={styles.input}
                                 onChange={e => setConfirm(e.target.value)}
+                                disabled={loading}
                             />
+                            <span className={`${styles.unMatchNotice} ${password === confirm && styles.hide}`}>Passwords do not match</span>
                         </div>
                         <div className={styles.formItem}>
                             <input
                                 type="checkbox"
                                 className={styles.checkbox}
-                                onClick={() => setChecked(prev => !prev)} />
+                                onClick={() => setChecked(prev => !prev)}
+                                disabled={loading}
+                            />
                             <p>The Mirror Test collects data for generating your results and for research purposes. Your details are not sent to any third-party applications. By clicking submit, you consent to providing your data.</p>
                         </div>
-                        <button
-                            disabled={false}
+                        {!loading && <button
+                            disabled={disabled}
                             className={styles.button}
                             onClick={Submit}>Sign Up
                         </button>
+                        }
+                        {loading && <Loader />}
+                        <span className={`${styles.error} ${!error && styles.hide}`}>{error}</span>
                     </div>
                 </div>
             </div>

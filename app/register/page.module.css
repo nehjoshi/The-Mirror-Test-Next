@@ -100,7 +100,13 @@
     border-bottom: 1px solid gray;
     color: #333333;
 }
-
+.unMatchNotice {
+    font-size: 0.8rem;
+    color: red;
+}
+.hide {
+    visibility: hidden;
+}
 .checkbox {
     transform: scale(1.5);
     cursor: pointer;
@@ -116,7 +122,7 @@
     height: 40px;
     border-radius: 2px;
     width: 40%;
-    margin: 20px auto;
+    margin: 0px auto;
     text-transform: uppercase;
     position: relative;
     transition: all 0.2s ease;
@@ -136,4 +142,10 @@
 .button:disabled:hover {
     width: 40%;
     background-color: #4E4637;
+}
+.error {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
 }
