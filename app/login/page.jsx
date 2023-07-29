@@ -14,18 +14,19 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [providers, setProviders] = useState(null);
+  const [pageLoading, setPageLoading] = useState(true);
   const router = useRouter();
   const { data: session } = useSession();
 
   useEffect(() => {
+    if (sessionStorage.getItem('token') || session?.user?.token) router.push('/dashboard');
     const setProvidersFunction = async () => {
       const response = await getProviders();
       setProviders(response);
+      setPageLoading(false);
     }
-    console.log(session)
     setProvidersFunction();
-    if (sessionStorage.getItem('token') || session?.user?.token) router.push('/dashboard');
-  }, [])
+  }, [session])
 
   const handleLogin = async () => {
     setLoading(true);
@@ -50,59 +51,61 @@ const Login = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.box}>
-        <div className={styles.imgContainer}>
-          <Image
-            src="/login.png"
-            alt="Login image"
-            className={styles.img}
-            fill={true}
-          />
-        </div>
-        <div className={styles.formContainer}>
-          <div className={styles.form}>
-            <h1 className={styles.title}>Login To Continue</h1>
-            <input
-              type="text"
-              placeholder="Email"
-              className={styles.input}
-              onChange={e => setEmail(e.target.value)}
+      {pageLoading ? <h1>Loading...</h1> :
+        <div className={styles.box}>
+          <div className={styles.imgContainer}>
+            <Image
+              src="/login.png"
+              alt="Login image"
+              className={styles.img}
+              fill={true}
             />
-            <input
-              type="password"
-              placeholder="Password"
-              className={styles.input}
-              onChange={e => setPassword(e.target.value)}
-            />
-            {loading && <Loader />}
-            {!loading && <button className={styles.btn} onClick={handleLogin}>Login</button>}
-            {error && <span className={styles.error}>{error}</span>}
-            <span className={styles.forgot}>Forgot Password?</span>
-            <span className={styles.or}>OR</span>
-            <div className={styles.googleBtn}>
-              {providers && Object.values(providers).map(provider => (
-                <>
-                  <div className={styles.logoContainer}>
-                    <Image
-                      src="/googleLogo.png"
-                      width={25}
-                      height={25}
-                      alt="Google logo"
-                    />
-                  </div>
-                  <div
-                    className={styles.text}
-                    key={provider.name}
-                    onClick={() => signIn(provider.id)}>Sign in with Google
-                  </div>
-                </>
-              ))}
+          </div>
+          <div className={styles.formContainer}>
+            <div className={styles.form}>
+              <h1 className={styles.title}>Login To Continue</h1>
+              <input
+                type="text"
+                placeholder="Email"
+                className={styles.input}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className={styles.input}
+                onChange={e => setPassword(e.target.value)}
+              />
+              {loading && <Loader />}
+              {!loading && <button className={styles.btn} onClick={handleLogin}>Login</button>}
+              {error && <span className={styles.error}>{error}</span>}
+              <span className={styles.forgot}>Forgot Password?</span>
+              <span className={styles.or}>OR</span>
+              <div className={styles.googleBtn}>
+                {providers && Object.values(providers).map(provider => (
+                  <>
+                    <div className={styles.logoContainer}>
+                      <Image
+                        src="/googleLogo.png"
+                        width={25}
+                        height={25}
+                        alt="Google logo"
+                      />
+                    </div>
+                    <div
+                      className={styles.text}
+                      key={provider.name}
+                      onClick={() => signIn(provider.id)}>Sign in with Google
+                    </div>
+                  </>
+                ))}
 
+              </div>
+              <span onClick={() => router.push('/register')} className={styles.register}>Don't have an account? Register.</span>
             </div>
-            <span onClick={() => router.push('/register')} className={styles.register}>Don't have an account? Register.</span>
           </div>
         </div>
-      </div>
+      }
     </section>
   )
 }

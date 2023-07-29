@@ -8,9 +8,10 @@ import Image from 'next/image';
 const Dashboard = () => {
   const { data: session } = useSession();
   useEffect(async () => {
-    const res = await fetch(`${ENDPOINTS.USER}/${session?.user?.id}`, {
-      method: "GET",
-    })
+    let token = sessionStorage.getItem("token") || session?.user?.token;
+    const res = await fetch(`${ENDPOINTS.USER}?token=${token}`);
+    const response = await res.json();
+    console.log(response);
   }, [])
   return (
     <div className={styles.container}>
