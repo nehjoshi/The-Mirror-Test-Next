@@ -1,8 +1,10 @@
 import User from "@/models/user";
+import { ConnectToDb } from "@/utils/database";
 import { verify } from "jsonwebtoken";
 import { getToken } from "next-auth/jwt";
 export const GET = async (req, { params }) => {
     try {
+        await ConnectToDb();
         const token = req.nextUrl.searchParams.get(["token"]);
         if (!token) return new Response(JSON.stringify({ error: "Missing access token" }), { status: 400 });
         const userObj = await verify(token, process.env.JWT_SECRET);
