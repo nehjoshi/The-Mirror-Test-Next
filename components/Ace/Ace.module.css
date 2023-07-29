@@ -1,0 +1,19 @@
+.container {
+    height: 550px;
+    width: 400px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 0 0 7px #7a7a7a;
+    color: #333333;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.heading {
+    border-bottom: 1px solid #b8b894;
+    text-align: center;
+}
+.text {
+    font-size: 1.5rem;
+}

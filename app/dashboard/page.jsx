@@ -12,7 +12,7 @@ const Dashboard = () => {
     const res = await fetch(`${ENDPOINTS.USER}?token=${token}`);
     const response = await res.json();
     console.log(response);
-  }, [])
+  }, [session]);
   return (
     <div className={styles.container}>
       <div className={styles.row}>
@@ -24,6 +24,7 @@ const Dashboard = () => {
           width={250}
           noOfQuestions={10}
           percent={0}
+          link="/ace"
         />
         <Card
           name="Attachment Style Test"
@@ -33,6 +34,7 @@ const Dashboard = () => {
           width={400}
           noOfQuestions={40}
           percent={20}
+          link="/ace"
         />
         <Card
           name="Hope and Optimism Test"
@@ -42,6 +44,7 @@ const Dashboard = () => {
           width={230}
           noOfQuestions={48}
           percent={40}
+          link="/ace"
         />
 
         <Card
@@ -52,6 +55,7 @@ const Dashboard = () => {
           width={270}
           noOfQuestions={50}
           percent={60}
+          link="/ace"
         />
         <Card
           name="Wellbeing (PERMA) Test"
@@ -61,6 +65,7 @@ const Dashboard = () => {
           width={400}
           noOfQuestions={23}
           percent={100}
+          link="/ace"
         />
       </div>
     </div>

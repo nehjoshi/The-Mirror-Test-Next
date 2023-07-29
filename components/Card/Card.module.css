@@ -18,6 +18,9 @@
 .container:hover {
     border-color: #008A7D;
 }
+.title {
+    text-align: center;
+}
 .divider {
     border: 0.1px solid #DFE0DF;
     width: 100%;
