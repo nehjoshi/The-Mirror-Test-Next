@@ -7,13 +7,12 @@ export const POST = async (req, res) => {
     try {
         await ConnectToDb();
         const exists = await User.findOne({ email });
-        const allUsers = await User.find();
-        console.log(allUsers);
         if (!exists) return new Response(JSON.stringify({error: "User does not exist"}), { status: 404 });
-        const correct = await compare(password, exists.password);
+        if (!exists.password) return new Response(JSON.stringify({error: "User does not exist"}), { status: 404 });
+        const correct = await compare(password, exists?.password);
         if (!correct) return new Response(JSON.stringify({error: "Incorrect password"}), { status: 401 });
         const token = sign({ id: exists._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
-        return new Response(JSON.stringify({ token }), { status: 200 });
+        return new Response(JSON.stringify({ token: token, _id: exists._id }), { status: 200 });
     } catch (error) {
         console.log(error);
         return new Response("Something went wrong!", { status: 500 });

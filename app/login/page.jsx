@@ -24,7 +24,7 @@ const Login = () => {
     }
     console.log(session)
     setProvidersFunction();
-    if (sessionStorage.getItem('token')) router.push('/');
+    if (sessionStorage.getItem('token') || session?.user?.token) router.push('/dashboard');
   }, [])
 
   const handleLogin = async () => {
@@ -37,7 +37,8 @@ const Login = () => {
     const response = await res.json();
     if (response.token) {
       sessionStorage.setItem('token', response.token);
-      router.push('/');
+      sessionStorage.setItem("_id", response._id);
+      router.push('/dashboard');
     }
     else {
       setError(response.error);

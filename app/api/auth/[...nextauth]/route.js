@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import User from '@/models/user';
 import { ConnectToDb } from '@/utils/database';
+import { ENDPOINTS } from '@/utils/endpoints';
 
 const handler = NextAuth({
     providers: [
@@ -14,7 +15,9 @@ const handler = NextAuth({
         async session({ session }) {
             const sessionUser = await User.findOne({ email: session.user.email });
             session.user.id = sessionUser._id.toString();
-
+            const res = await fetch(`${ENDPOINTS.SET_TOKEN}/${sessionUser._id}`);
+            const response = await res.json();
+            session.user.token = response.token
             return session;
         },
         async signIn({ account, profile, user, credentials }) {
@@ -24,14 +27,14 @@ const handler = NextAuth({
                 if (!userExists) {
                     const user = new User({
                         email: profile.email,
-                        // image: profile.picture,
+                        userAgreesWithPrivacyPolicy: true
                     })
                     await user.save();
                 }
-                return true
+                return true;
             } catch (error) {
                 console.log("Error checking if user exists: ", error.message);
-                return false
+                return false;
             }
         },
     }
