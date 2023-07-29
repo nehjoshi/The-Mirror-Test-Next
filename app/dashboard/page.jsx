@@ -3,7 +3,7 @@ import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { ENDPOINTS } from '@/utils/endpoints';
-import Image from 'next/image';
+import Card from '@/components/Card/Card';
 
 const Dashboard = () => {
   const { data: session } = useSession();
@@ -15,7 +15,54 @@ const Dashboard = () => {
   }, [])
   return (
     <div className={styles.container}>
-      <h1>Dashboard</h1>
+      <div className={styles.row}>
+        <Card
+          name="Adverse Childhood Experiences"
+          desc="Adverse Childhood Experiences are what govern our lives and shape our future. Take this test to find out more."
+          image='/ace.png'
+          height={250}
+          width={250}
+          noOfQuestions={10}
+          percent={0}
+        />
+        <Card
+          name="Attachment Style Test"
+          desc="How do you attach with your loved ones or your partner? Out of the four attachment styles, secure, anxious, avoidant and disorganized, which one are you?"
+          image='/att_style.png'
+          height={400}
+          width={400}
+          noOfQuestions={40}
+          percent={20}
+        />
+        <Card
+          name="Hope and Optimism Test"
+          desc="How optimistic or pessimistic are you? And how does your level of hope affect your life? Take this test to gain further insights."
+          image='/hope.png'
+          height={230}
+          width={230}
+          noOfQuestions={48}
+          percent={40}
+        />
+
+        <Card
+          name="Big Five Personality Test"
+          desc="Out of the five big personality traits, which one suits you the best? Answer these 50 questions to find out more."
+          image='/bft.png'
+          height={270}
+          width={270}
+          noOfQuestions={50}
+          percent={60}
+        />
+        <Card
+          name="Wellbeing (PERMA) Test"
+          desc="How do you feel about your overall wellbeing, quality of life and your general health? Take the wellbeing test to know more about this."
+          image='/perma.png'
+          height={400}
+          width={400}
+          noOfQuestions={23}
+          percent={100}
+        />
+      </div>
     </div>
   )
 }

@@ -1,10 +1,27 @@
 .container {
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     background: url('/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
+.row {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.row > div {
+    width: 90%;
+}
+@media (max-width: 600px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
