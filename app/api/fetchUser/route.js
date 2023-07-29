@@ -10,7 +10,14 @@ export const GET = async (req, { params }) => {
         const userObj = await verify(token, process.env.JWT_SECRET);
         if (!userObj) return new Response(JSON.stringify({ error: "Invalid access token" }), { status: 401 });
         const user = await User.findById(userObj.id);
-        return new Response(JSON.stringify({ user }, { status: 200 }));
+        const respObject = {
+            quiz1: user.quiz1,
+            quiz2: user.quiz2,
+            quiz3: user.quiz3,
+            quiz4: user.quiz4,
+            quiz5: user.quiz5
+        }
+        return new Response(JSON.stringify({ user: respObject }, { status: 200 }));
     }
     catch (error) {
         return new Response(JSON.stringify({ error: "Something went wrong" }, { status: 500 }));

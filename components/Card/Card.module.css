@@ -57,8 +57,17 @@
     cursor: pointer;
     background-color: #e6b635;
 }
+.completed {
+    background-color: #008A7D !important;
+    color: #fff;
+}
 .noOfQuestions {
     color: #7a7a7a;
     text-align: center;
     font-size: 1.1rem;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        height: fit-content;
+    }
 }

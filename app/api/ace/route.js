@@ -14,7 +14,7 @@ export const GET = async (req, res) => {
 
         //Look for ACE questionnaire progress
 
-        return new Response(JSON.stringify({qno: user.quiz1.lastQ}, {status: 200}));
+        return new Response(JSON.stringify({qno: user.quiz1.lastQ, done: user.quiz1.finished}, {status: 200}));
     }
     catch(error) {
         console.log(error);

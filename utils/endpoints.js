@@ -4,5 +4,5 @@ export const ENDPOINTS = {
     REGISTER: `${url}/auth/register`,
     SET_TOKEN: `${url}/auth/setToken`,
     USER: `${url}/fetchUser`,
-    ACE_CURRENT: `${url}/ace`,
+    ACE: `${url}/ace`,
 }

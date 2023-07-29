@@ -121,7 +121,12 @@ const schema = new Schema({
     },
     quiz1: {
         type: Quiz1Schema,
-        default: {}
+        default: {
+            lastQ: 1,
+            result: 0,
+            resultDesc: "",
+            finished: false
+        }
     },
     quiz2: {
         type: Quiz2Schema,

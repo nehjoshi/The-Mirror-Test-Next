@@ -17,3 +17,54 @@
 .text {
     font-size: 1.5rem;
 }
+.btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    width: 40%;
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    font-size: 1.3rem;
+}
+.btn:hover {
+    background-color: rgb(190, 190, 244);
+    border-color: transparent;
+}
+.btn:active {
+    background-color: rgb(109, 109, 244);
+    border-color: transparent;
+}
+.selected {
+    background-color: rgb(109, 109, 244) !important;
+    border-color: transparent;
+}
+.next {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: #ffcb3b;
+    margin: 40px auto;
+    padding: 10px 8px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.next:hover {
+    background-color: #f7bf23;
+}
+.disabled {
+    cursor: not-allowed !important;
+    opacity: 0.4 !important;
+}

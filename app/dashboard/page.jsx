@@ -7,11 +7,16 @@ import Card from '@/components/Card/Card';
 
 const Dashboard = () => {
   const { data: session } = useSession();
-  useEffect(async () => {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
     let token = sessionStorage.getItem("token") || session?.user?.token;
-    const res = await fetch(`${ENDPOINTS.USER}?token=${token}`);
-    const response = await res.json();
-    console.log(response);
+    const GetInitialLoad = async () => {
+      const res = await fetch(`${ENDPOINTS.USER}?token=${token}`);
+      const response = await res.json();
+      setUser(response.user);
+      console.log(response);
+    }
+    GetInitialLoad();
   }, [session]);
   return (
     <div className={styles.container}>
@@ -23,7 +28,7 @@ const Dashboard = () => {
           height={250}
           width={250}
           noOfQuestions={10}
-          percent={0}
+          percent={(user?.quiz1?.lastQ / 10) * 100 || 0}
           link="/ace"
         />
         <Card
@@ -33,7 +38,7 @@ const Dashboard = () => {
           height={400}
           width={400}
           noOfQuestions={40}
-          percent={20}
+          percent={(user?.quiz2.lastQ / 40) * 100 || 0}
           link="/ace"
         />
         <Card
@@ -43,7 +48,7 @@ const Dashboard = () => {
           height={230}
           width={230}
           noOfQuestions={48}
-          percent={40}
+          percent={(user?.quiz3.lastQ / 48) * 100 || 0}
           link="/ace"
         />
 
@@ -54,7 +59,7 @@ const Dashboard = () => {
           height={270}
           width={270}
           noOfQuestions={50}
-          percent={60}
+          percent={(user?.quiz4.lastQ / 50) * 100 || 0}
           link="/ace"
         />
         <Card
@@ -64,7 +69,7 @@ const Dashboard = () => {
           height={400}
           width={400}
           noOfQuestions={23}
-          percent={100}
+          percent={(user?.quiz5.lastQ / 23) * 100 || 0}
           link="/ace"
         />
       </div>

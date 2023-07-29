@@ -11,26 +11,43 @@ import { useRouter } from 'next/navigation';
 const Page = () => {
     const { data: session } = useSession();
     const [loading, setLoading] = useState(true);
-    const [number, setNumber] = useState(5);
+    const [number, setNumber] = useState(0);
     const router = useRouter();
     useEffect(() => {
         const accessToken = sessionStorage?.getItem("token") || session?.user?.token;
         const GetData = async () => {
-            const res = await fetch(`${ENDPOINTS.ACE_CURRENT}?token=${accessToken}`);
+            const res = await fetch(`${ENDPOINTS.ACE}?token=${accessToken}`);
             const response = await res.json();
             if (response.error) console.log(response.error);
+            if (response.done){
+                 return router.push('/dashboard');
+            }
             else setNumber(response.qno);
             setLoading(false);
-            console.log(typeof response.qno.toString());
+            console.log(response);
         }
         GetData();
-    }, []);
+    }, [number]);
+
+    const SubmitResponse = async (answer) => {
+        setLoading(true);
+        const accessToken = sessionStorage?.getItem("token") || session?.user?.token;
+        const res = await fetch(`${ENDPOINTS.ACE}/${number}?token=${accessToken}`, {
+            method: "POST",
+            body: JSON.stringify({response: answer})
+        })
+        const response = await res.json();
+        console.log(response);
+        setNumber(number => number + 1);
+    }
+
     return (
         <div className={styles.container}>
             {!loading &&
                 <Ace
                     qno={number}
                     question={QuestionSet.ace[number]}
+                    SubmitResponse={SubmitResponse}
                 />
             }
         </div>
