@@ -1,5 +1,5 @@
 .container {
-    height: 550px;
+    min-height: 550px;
     width: 400px;
     background-color: #f7f7f7;
     border-radius: 20px;
@@ -21,9 +21,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
 }
 .btn {
-    width: 40%;
+    width: 100%;
     border: 2px solid gray;
     outline: none;
     border-radius: 25px;

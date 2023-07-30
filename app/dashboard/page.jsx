@@ -39,7 +39,7 @@ const Dashboard = () => {
           width={400}
           noOfQuestions={40}
           percent={(user?.quiz2.lastQ / 40) * 100 || 0}
-          link="/ace"
+          link="/att-style"
         />
         <Card
           name="Hope and Optimism Test"

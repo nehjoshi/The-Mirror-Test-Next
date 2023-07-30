@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./Ace.module.css";
+import { MdDone } from "react-icons/md";
 const Ace = ({ qno, question, SubmitResponse }) => {
   const [response, setResponse] = useState("");
   console.log("THe question is", question);
@@ -25,6 +26,7 @@ const Ace = ({ qno, question, SubmitResponse }) => {
         onClick={() => SubmitResponse(response)}>
         NEXT
       </button>
+      <span className={styles.notice}><MdDone />&nbsp;&nbsp;&nbsp;Your responses are being auto-saved.</span>
     </div>
   )
 }

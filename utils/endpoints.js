@@ -5,4 +5,5 @@ export const ENDPOINTS = {
     SET_TOKEN: `${url}/auth/setToken`,
     USER: `${url}/fetchUser`,
     ACE: `${url}/ace`,
+    ATT_STYLE: `${url}/att-style`,
 }
