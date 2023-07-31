@@ -174,7 +174,368 @@ export const QuestionSet = {
         },
 
     },
-    hope: {},
+    hope: {
+        1: {
+            type: 'psg',
+            question: 'The project you are in charge of is a great success',
+            option_1: {
+                option: "I kept a close watch on everyone's work.",
+                value: 1
+            },
+            option_2: {
+                option: "Everyone devoted a lot of time and energy to it.",
+                value: 0
+            }
+        },
+        2: {
+            type: 'pmg',
+            question: "You and your spouse (boyfriend/girlfriend) make up after a fight.",
+            option_1: {
+                option: "I forgave him/her.",
+                value: 0
+            },
+            option_2: {
+                option: "I'm usually forgiving.",
+                value: 1
+            }
+        },
+        3: {
+            type: 'psb',
+            question: "You get lost driving to a friend's house.",
+            option_1: {
+                option: "I missed a turn.",
+                value: 1
+            },
+            option_2: {
+                option: "My friend gave me bad directions.",
+                value: 0
+            }
+        },
+        4: {
+            type: 'psg',
+            question: "Your spouse (boyfriend/girlfriend) surprises you with a gift.",
+            option_1: {
+                option: "He/she just got a raise at work.",
+                value: 0
+            },
+            option_2: {
+                option: "I took him/her out to a special dinner the night before.",
+                value: 1
+            }
+        },
+        5: {
+            type: 'pmb',
+            question: "You forgot your spouse's (boyfriend's/girlfriend's) birthday.",
+            option_1: {
+                option: "I'm not good at remembering birthdays.",
+                value: 1
+            },
+            option_2: {
+                option: "I was preoccupied with other things.",
+                value: 0
+            }
+        },
+        6: {
+            type: 'pvg',
+            question: 'You get a flower from a secret admirer.',
+            option_1: {
+                option: "I'm attractive to him/her.",
+                value: 0
+            },
+            option_2: {
+                option: "I am a popular person.",
+                value: 1
+            }
+        },
+        7: {
+            type: 'pvg',
+            question: "You run for a community office position and you win.",
+            option_1: {
+                option: "I devote a lot of time and energy to campaigning.",
+                value: 0
+            },
+            option_2: {
+                option: "I work very hard at everything I do.",
+                value: 1
+            }
+        },
+        8: {
+            type: 'pvb',
+            question: 'You miss an important engagement.',
+            option_1: {
+                option: "Sometimes my memory fails me.",
+                value: 1
+            },
+            option_2: {
+                option: "I sometimes forget to check my appointment book.",
+                value: 0
+            }
+        },
+        9: {
+            type: 'psb',
+            question: "You run for a community office position and you lose.",
+            option_1: {
+                option: "I didn't campaign hard enough.",
+                value: 1
+            },
+            option_2: {
+                option: "The person who won knew more people.",
+                value: 0
+            }
+        },
+        10: {
+            type: 'pmg',
+            question: "",
+            option_1: {
+                option: "I was particularly charming that night.",
+                value: 0
+            },
+            option_2: {
+                option: "I am a good host.",
+                value: 1
+            }
+        },
+        11: {
+            type: 'psg',
+            question: "You stop a crime by calling the police.",
+            option_1: {
+                option: "A strange noise caught my attention.",
+                value: 0
+            },
+            option_2: {
+                option: "I was alert that day.",
+                value: 1
+            }
+        },
+        12: {
+            type: 'psg',
+            question: "You were extremely healthy all year.",
+            option_1: {
+                option: "Few people around me were sick, so I wasn't exposed.",
+                value: 0
+            },
+            option_2: {
+                option: "I made sure I ate well and got enough rest.",
+                value: 1
+            }
+        },
+        13: {
+            type: 'pmb',
+            question: "You owe the library 10 dollars for an overdue book.",
+            option_1: {
+                option: "When I am really involed in what I am reading, I often forget when it's due.",
+                value: 1
+            },
+            option_2: {
+                option: "I was so involed in writing the report that I forgot to return the book.",
+                value: 0
+            }
+        },
+        14: {
+            type: 'pmg',
+            question: "Your stocks make you a lot of money.",
+            option_1: {
+                option: "My broker decided to take on something new.",
+                value: 0
+            },
+            option_2: {
+                option: "My broker is a top-notch investor.",
+                value: 1
+            }
+        },
+        15: {
+            type: 'pmg',
+            question: "You win an athletic contest.",
+            option_1: {
+                option: "I was feeling unbeatable.",
+                value: 0
+            },
+            option_2: {
+                option: "I train hard.",
+                value: 1
+            }
+        },
+        16: {
+            type: 'psb',
+            question: "You fail an important examination.",
+            option_1: {
+                option: "I wasn't as smart as the other people in the exam.",
+                value: 1
+            },
+            option_2: {
+                option: "I didn't prepare for it well.",
+                value: 0
+            }
+        },
+        17: {
+            type: 'pvb',
+            question: "You prepared a special meal for a friend and he/she barely touched the food.",
+            option_1: {
+                option: "I wasn't a good cook.",
+                value: 1
+            },
+            option_2: {
+                option: "I made the meal in a rush.",
+                value: 0
+            }
+        },
+        18: {
+            type: 'pvb',
+            question: "You lose a sporting event for which you have been training for a long time.",
+            option_1: {
+                option: "I'm not very athletic.",
+                value: 1
+            },
+            option_2: {
+                option: "I'm not good at that sport.",
+                value: 0
+            }
+        },
+        19: {
+            type: 'psb',
+            question: "Your car runs out of gas on a dark street late at night.",
+            option_1: {
+                option: "I didn't check to see how much gas was in the tank.",
+                value: 1
+            },
+            option_2: {
+                option: "The gas garage was broken.",
+                value: 0
+            }
+        },
+        20: {
+            type: 'pmb',
+            question: "You lose your temper with a friend.",
+            option_1: {
+                option: "He/she is always nagging me.",
+                value: 1
+            },
+            option_2: {
+                option: "He/she was in a hostile mood.",
+                value: 0
+            }
+        },
+        21: {
+            type: "pmb",
+            question: "You are penalized for not returning your income-tax forms on time.",
+            option_1: {
+                option: "I always put off doing my taxes.",
+                value: 1,
+            },
+            option_2: {
+                option: "I was lazy about getting my taxes done this year.",
+                value: 0
+            }
+        },
+        22: {
+            type: "pvb",
+            question: "You ask a person out on a date and he/she says no.",
+            option_1: {
+                option: "I was a wreck that day.",
+                value: 1,
+            },
+            option_2: {
+                option: "I got tongue-tied when I asked him/her on the date.",
+                value: 0
+            }
+        },
+        23: {
+            type: "psg",
+            question: "A game-show host picks you out of the audience to participate in the show.",
+            option_1: {
+                option: "I was sitting in the right seat.",
+                value: 0
+            },
+            option_2: {
+                option: "I looked the most enthusiastic.",
+                value: 1
+            }
+        },
+        24: {
+            type: "pmg",
+            question: "You are frequently asked to dance at a party.",
+            option_1: {
+                option: "I am outgoing at parties.",
+                value: 1,
+            },
+            option_2: {
+                option: "I was in perfect form last night.",
+                value: 0
+            }
+        },
+        25: {
+            type: "psb",
+            question: "You buy your spouse (boyfriend/girlfriend) a gift and he/she doesn't like it.",
+            option_1: {
+                option: "I don't put enough thought into things like that.",
+                value: 1,
+            },
+            option_2: {
+                option: "He/she has very picky tastes.",
+                value: 0
+            }
+        },
+        26: {
+            type: "pmg",
+            question: "You do exceptionally well in a job interview.",
+            option_1: {
+                option: "I felt extremely confident during the interview.",
+                value: 0
+            },
+            option_2: {
+                option: "I interview well.",
+                value: 1
+            }
+        },
+        27: {
+            type: "psg",
+            question: "You tell a joke and everyone laughs.",
+            option_1: {
+                option: "The joke was funny.",
+                value: 0,
+            },
+            option_2: {
+                option: "My timing was perfect.",
+                value: 1
+            }
+        },
+        28: {
+            type: "pvg",
+            question: "Your boss gives you too little time in which to finish a project, but you get it finished anyway.",
+            option_1: {
+                option: "I am good at my job.",
+                value: 0
+            },
+            option_2: {
+                option: "I am an efficient person.",
+                value: 1
+            }
+        },
+        29: {
+            type: "pmb",
+            question: "You've been feeling run-down lately.",
+            option_1: {
+                option: "I never get a chance to relax.",
+                value: 1,
+            },
+            option_2: {
+                option: "I was exceptionally busy this week.",
+                value: 0
+            }
+        },
+        30: {
+            type: "psb",
+            question: "You ask someone to dance and he/she says no.",
+            option_1: {
+                option: "I am not a good enough dancer.",
+                value: 1,
+            },
+            option_2: {
+                option: "He/She doesn't like to dance.",
+                value: 0
+            }
+        },
+    },
     bft: {},
     perma: {}
 }
