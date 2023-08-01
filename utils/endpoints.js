@@ -6,4 +6,5 @@ export const ENDPOINTS = {
     USER: `${url}/fetchUser`,
     ACE: `${url}/ace`,
     ATT_STYLE: `${url}/att-style`,
+    HOPE: `${url}/hope`,
 }

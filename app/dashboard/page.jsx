@@ -29,7 +29,7 @@ const Dashboard = () => {
           width={250}
           noOfQuestions={10}
           percent={(user?.quiz1?.lastQ / 10) * 100 || 0}
-          link="/ace"
+          link="/quiz/ace"
         />
         <Card
           name="Attachment Style Test"
@@ -39,7 +39,7 @@ const Dashboard = () => {
           width={400}
           noOfQuestions={40}
           percent={(user?.quiz2.lastQ / 40) * 100 || 0}
-          link="/att-style"
+          link="/quiz/att-style"
         />
         <Card
           name="Hope and Optimism Test"
@@ -49,7 +49,7 @@ const Dashboard = () => {
           width={230}
           noOfQuestions={48}
           percent={(user?.quiz3.lastQ / 48) * 100 || 0}
-          link="/ace"
+          link="/quiz/hope"
         />
 
         <Card

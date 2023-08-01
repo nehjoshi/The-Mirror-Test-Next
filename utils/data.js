@@ -535,6 +535,222 @@ export const QuestionSet = {
                 value: 0
             }
         },
+        31: {
+            type: "pvg",
+            question: "You save a person from choking to death.",
+            option_1: {
+                option: "I know a technique to stop someone from choking.",
+                value: 0
+            },
+            option_2: {
+                option: "I know what to do in crisis situations.",
+                value: 1
+            }
+        },
+        32: {
+            type: "pvb",
+            question: "Your romantic partner wants to cool things off for a while.",
+            option_1: {
+                option: "I'm too self-centered.",
+                value: 1
+            },
+            option_2: {
+                option: "I don't spend enough time with him/her.",
+                value: 0
+            }
+        },
+        33: {
+            type: "pmb",
+            question: "A friend says something that hurts your feelings.",
+            option_1: {
+                option: "He/she always blurts things out without thinking of others.",
+                value: 1
+            },
+            option_2: {
+                option: "My friend was in a bad mood and took it out on me.",
+                value: 0
+            }
+        },
+        34: {
+            type: "pvg",
+            question: "Your employer comes to you for advice.",
+            option_1: {
+                option: "I am an expert in the area about which I was asked.",
+                value: 0
+            },
+            option_2: {
+                option: "I am good at giving useful advice.",
+                value: 1
+            }
+        },
+        35: {
+            type: "psb",
+            question: "A friend thanks you for helping him/her get through a bad time.",
+            option_1: {
+                option: "I enjoy helping him/her through tough times.",
+                value: 1
+            },
+            option_2: {
+                option: "I care about people.",
+                value: 0
+            }
+        },
+        36: {
+            type: "psg",
+            question: "You have a wonderful time at a party.",
+            option_1: {
+                option: "Everyone was friendly.",
+                value: 0
+            },
+            option_2: {
+                option: "I was friendly.",
+                value: 1
+            }
+        },
+        37: {
+            type: "pvg",
+            question: "Your doctor tells you that you are in good physical shape.",
+            option_1: {
+                option: "I make sure I exercise frequently.",
+                value: 0
+            },
+            option_2: {
+                option: "I am very health-conscious.",
+                value: 1
+            }
+        },
+        38: {
+            type: "pmg",
+            question: "Your spouse (boyfriend/girlfriend) takes you away for a romantic weekend.",
+            option_1: {
+                option: "He/she needed to get away for a few days.",
+                value: 0
+            },
+            option_2: {
+                option: "He/she likes to explore new areas.",
+                value: 1
+            }
+        },
+        39: {
+            type: "psb",
+            question: "Your doctor tells you that you eat too much sugar.",
+            option_1: {
+                option: "I don't pay much attention to my diet.",
+                value: 1
+            },
+            option_2: {
+                option: "You can't avoid sugar, it's in everything.",
+                value: 0
+            }
+        },
+        40: {
+            type: "pmg",
+            question: "You are asked to head an important project.",
+            option_1: {
+                option: "I just successfully completed a similar project.",
+                value: 0
+            },
+            option_2: {
+                option: "I am a good supervisor.",
+                value: 1
+            }
+        },
+        41: {
+            type: "psb",
+            question: "You and your spouse (boyfriend/girlfriend) have been fighting a great deal.",
+            option_1: {
+                option: "I have been feeling cranky and pressured lately.",
+                value: 1
+            },
+            option_2: {
+                option: "He/she has been hostile lately.",
+                value: 0
+            }
+        },
+        42: {
+            type: "pmb",
+            question: "You fall down a great deal while skiing.",
+            option_1: {
+                option: "Skiing is difficult.",
+                value: 1
+            },
+            option_2: {
+                option: "The trails were icy.",
+                value: 0
+            }
+        },
+        43: {
+            type: "pvg",
+            question: "You win a prestigious award.",
+            option_1: {
+                option: "I solved an important problem.",
+                value: 0
+            },
+            option_2: {
+                option: "I was the best employee.",
+                value: 1
+            }
+        },
+        44: {
+            type: "pvb",
+            question: "You stocks are at an all-time low.",
+            option_1: {
+                option: "I didn't know much about the business climate at the time.",
+                value: 1
+            },
+            option_2: {
+                option: "I made a poor choice of stocks.",
+                value: 0
+            }
+        },
+        45: {
+            type: "psg",
+            question: "You win the lottery.",
+            option_1: {
+                option: "It was pure chance.",
+                value: 0
+            },
+            option_2: {
+                option: "I picked the right numbers.",
+                value: 1
+            }
+        },
+        46: {
+            type: "pmb",
+            question: "You gain weight over the holidays and you can't lose it.",
+            option_1: {
+                option: "Diets don't work in the long run.",
+                value: 1
+            },
+            option_2: {
+                option: "The diet I tried didn't work.",
+                value: 0
+            }
+        },
+        47: {
+            type: "psb",
+            question: "You are in the hospital and few people come to visit.",
+            option_1: {
+                option: "I'm irritable when I'm sick.",
+                value: 1
+            },
+            option_2: {
+                option: "My friends are negligient about things like that.",
+                value: 0
+            }
+        },
+        48: {
+            type: "pvb",
+            question: "They won't honor your credit at a store.",
+            option_1: {
+                option: "I sometimes overestimate how much money I have.",
+                value: 1
+            },
+            option_2: {
+                option: "I sometimes forget to pay my credit-card bill.",
+                value: 0
+            }
+        },
     },
     bft: {},
     perma: {}
