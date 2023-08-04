@@ -31,9 +31,9 @@ const Page = () => {
     const SubmitResponse = async (type, answer) => {
         setLoading(true);
         const accessToken = sessionStorage?.getItem("token") || session?.user?.token;
-        const res = await fetch(`${ENDPOINTS.ATT_STYLE}/${number}?token=${accessToken}`, {
+        const res = await fetch(`${ENDPOINTS.HOPE}/${number}?token=${accessToken}`, {
             method: "POST",
-            body: JSON.stringify({response: answer, type: QuestionSet.att_style[number].type})
+            body: JSON.stringify({response: answer, type: QuestionSet.hope[number].type})
         })
         const response = await res.json();
         console.log(response);

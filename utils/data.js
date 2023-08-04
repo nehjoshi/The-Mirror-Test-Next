@@ -752,6 +752,387 @@ export const QuestionSet = {
             }
         },
     },
-    bft: {},
+    bft: {
+        1: {
+            type: "e",
+            question: "I am the life of the party.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        2: {
+            type: "a",
+            question: "I feel little concern for others.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        3: {
+            type: "c",
+            question: "I am always prepared.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        4: {
+            type: "n",
+            question: "I get stressed out easily.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        5: {
+            type: "o",
+            question: "I have a rich vocabulary.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        6: {
+            type: "e",
+            question: "I don't talk a lot.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        7: {
+            type: "a",
+            question: "I am interested in people.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        8: {
+            type: "c",
+            question: "I leave my belongings around.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        9: {
+            type: "n",
+            question: "I am relaxed most of the time.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        10: {
+            type: "o",
+            question: "I have difficulty understanding abstract ideas.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        11: {
+            type: "e",
+            question: "I feel comfortable around people.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        12: {
+            type: "a",
+            question: "I insult people.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        13: {
+            type: "c",
+            question: "I pay attention to details.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        14: {
+            type: "n",
+            question: "I worry about things.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        15: {
+            type: "o",
+            question: "I have a vivid imagination.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        16: {
+            type: "e",
+            question: "I keep in the background.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        17: {
+            type: "a",
+            question: "I sympathize with others' feelings.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        18: {
+            type: "c",
+            question: "I make a mess of things.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        19: {
+            type: "n",
+            question: "I seldom feel blue.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        20: {
+            type: "o",
+            question: "I am not interested in abstract ideas.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+    },
     perma: {}
 }

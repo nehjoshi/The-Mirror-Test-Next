@@ -28,7 +28,7 @@ const Dashboard = () => {
           height={250}
           width={250}
           noOfQuestions={10}
-          percent={(user?.quiz1?.lastQ / 10) * 100 || 0}
+          percent={user?.quiz1?.finished ? 100 : ((user?.quiz1?.lastQ - 1) / 10) * 100 || 0}
           link="/quiz/ace"
         />
         <Card
@@ -38,7 +38,7 @@ const Dashboard = () => {
           height={400}
           width={400}
           noOfQuestions={40}
-          percent={(user?.quiz2.lastQ / 40) * 100 || 0}
+          percent={user?.quiz2?.finished ? 100 :  ((user?.quiz2.lastQ - 1) / 40) * 100 || 0}
           link="/quiz/att-style"
         />
         <Card
@@ -48,7 +48,7 @@ const Dashboard = () => {
           height={230}
           width={230}
           noOfQuestions={48}
-          percent={(user?.quiz3.lastQ / 48) * 100 || 0}
+          percent={user?.quiz3?.finished ? 100 :  ((user?.quiz3.lastQ - 1) / 48) * 100 || 0}
           link="/quiz/hope"
         />
 
@@ -59,7 +59,7 @@ const Dashboard = () => {
           height={270}
           width={270}
           noOfQuestions={50}
-          percent={(user?.quiz4.lastQ / 50) * 100 || 0}
+          percent={user?.quiz4?.finished ? 100 : ((user?.quiz4.lastQ - 1 )/ 50) * 100 || 0}
           link="/ace"
         />
         <Card
@@ -69,7 +69,7 @@ const Dashboard = () => {
           height={400}
           width={400}
           noOfQuestions={23}
-          percent={(user?.quiz5.lastQ / 23) * 100 || 0}
+          percent={user?.quiz5?.finished ? 100 :  ((user?.quiz5.lastQ - 1) / 23) * 100 || 0}
           link="/ace"
         />
       </div>
