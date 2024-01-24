@@ -1,12 +1,11 @@
-"use client";
-import { useState } from "react";
+import { useState } from 'react';
 import styles from "./AttStyle.module.css";
-import { MdDone } from "react-icons/md";
+import { MdDone } from 'react-icons/md';
+
 const AttStyle = ({ qno, question, SubmitResponse }) => {
-    const [response, setResponse] = useState("");
-    console.log("THe question is", question);
-    return (
-        <div className={styles.container}>
+    const [response, setResponse] = useState('');
+  return (
+    <div className={styles.container}>
             <h1 className={styles.heading}>Question {qno}</h1>
             <p className={styles.text}>{question}</p>
             <div className={styles.btnWrapper}>
@@ -38,7 +37,7 @@ const AttStyle = ({ qno, question, SubmitResponse }) => {
             </button>
             <span className={styles.notice}><MdDone />&nbsp;&nbsp;&nbsp;Your responses are being auto-saved.</span>
         </div>
-    )
-}
+  )
+};
 
 export default AttStyle;

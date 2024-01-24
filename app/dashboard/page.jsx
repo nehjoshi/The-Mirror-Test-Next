@@ -60,7 +60,7 @@ const Dashboard = () => {
           width={270}
           noOfQuestions={50}
           percent={user?.quiz4?.finished ? 100 : ((user?.quiz4.lastQ - 1 )/ 50) * 100 || 0}
-          link="/ace"
+          link="/quiz/bft"
         />
         <Card
           name="Wellbeing (PERMA) Test"

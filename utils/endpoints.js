@@ -7,4 +7,5 @@ export const ENDPOINTS = {
     ACE: `${url}/ace`,
     ATT_STYLE: `${url}/att-style`,
     HOPE: `${url}/hope`,
+    BFT: `${url}/bft`
 }

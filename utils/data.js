@@ -1133,6 +1133,576 @@ export const QuestionSet = {
                 value: -5
             }
         },
+        21: {
+            type: "e",
+            question: "I start conversations.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        22: {
+            type: "a",
+            question: "I am not interested in other people's problems.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        23: {
+            type: "c",
+            question: "I get chores done right away.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        24: {
+            type: "n",
+            question: "I am easily disturbed.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        25: {
+            type: "o",
+            question: "I have excellent ideas.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        26: {
+            type: "e",
+            question: "I have little to say.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        27: {
+            type: "a",
+            question: "I have a soft heart.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        28: {
+            type: "c",
+            question: "I often forget to put things back in their proper place.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        29: {
+            type: "n",
+            question: "I get upset easily.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        30: {
+            type: "o",
+            question: "I do not have a good imagination.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        31: {
+            type: "e",
+            question: "I talk to a lot of different people at parties.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        32: {
+            type: "a",
+            question: "I am not really interested in others.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        33: {
+            type: "c",
+            question: "I like order.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        34: {
+            type: "n",
+            question: "I change my mood a lot.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        35: {
+            type: "o",
+            question: "I am quick to understand things.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        36: {
+            type: "e",
+            question: "I don't like to draw attention to myself.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        37: {
+            type: "a",
+            question: "I take time out for others.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        38: {
+            type: "c",
+            question: "I shirk my duties.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        39: {
+            type: "n",
+            question: "I have frequent mood swings.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        40: {
+            type: "o",
+            question: "I use difficult words.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        41: {
+            type: "e",
+            question: "I don't mind being the center of attention.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        42: {
+            type: "a",
+            question: "I feel others' emotions.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        43: {
+            type: "c",
+            question: "I follow a schedule.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        44: {
+            type: "n",
+            question: "I get irritated easily.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        45: {
+            type: "o",
+            question: "I spend time reflecting on things.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        46: {
+            type: "e",
+            question: "I am quiet around strangers.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        47: {
+            type: "a",
+            question: "I make people feel at ease.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        48: {
+            type: "c",
+            question: "I am exacting in my work.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
+        49: {
+            type: "o",
+            question: "I often feel blue.",
+            option_1: {
+                value: -1
+            },
+            option_2: {
+                value: -2
+            },
+            option_3: {
+                value: -3
+            },
+            option_4: {
+                value: -4
+            },
+            option_5: {
+                value: -5
+            }
+        },
+        50: {
+            type: "o",
+            question: "I am full of ideas.",
+            option_1: {
+                value: 1
+            },
+            option_2: {
+                value: 2
+            },
+            option_3: {
+                value: 3
+            },
+            option_4: {
+                value: 4
+            },
+            option_5: {
+                value: 5
+            }
+        },
     },
     perma: {}
 }
